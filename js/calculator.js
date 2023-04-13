@@ -57,3 +57,22 @@ equal.addEventListener("click", () => {
   }
   console.log(firstNumber, sign, number);
 });
+
+document
+  .querySelector(".calculator__btn--special4")
+  .addEventListener("click", () => {
+    number = -number;
+    screen.textContent = number;
+    console.log(number);
+  });
+
+document
+  .querySelector(".calculator__btn--special2")
+  .addEventListener("click", () => {
+    number = "";
+    firstNumber = 0;
+    flag = true;
+    markFlag = true;
+    sign = 0;
+    screen.textContent = "";
+  });
