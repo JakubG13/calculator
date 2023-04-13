@@ -92,8 +92,14 @@ document
   .querySelector(".calculator__btn--special4")
   .addEventListener("click", () => {
     number = -number;
-    screen.textContent = number;
-    console.log(number);
+
+    if (firstNumber) {
+      screen.textContent = firstNumber;
+      screen.textContent += sign;
+      screen.textContent += number;
+    } else {
+      screen.textContent = number;
+    }
   });
 
 document
