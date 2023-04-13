@@ -44,4 +44,9 @@
   justify-content: center;
   margin: 2.5px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.calculator__btn--normal {
+  background-color: rgb(41, 31, 31);
 }
