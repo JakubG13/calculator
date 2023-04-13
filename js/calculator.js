@@ -1,4 +1,4 @@
-const screen = document.querySelector(".calculator__screen");
+const screen = document.querySelector(".calculator__screen span");
 const btns = [...document.querySelectorAll(".calculator__btn--normal")];
 const marks = [...document.querySelectorAll(".calculator__btn--mark")];
 const equal = document.querySelector(".calculator__btn--special5");
@@ -8,8 +8,13 @@ let flag = true;
 let markFlag = true;
 let sign = 0;
 let percent = false;
+let startFlag = true;
 btns.forEach((btn) => {
   btn.addEventListener("click", () => {
+    if (startFlag) {
+      screen.textContent = "";
+      startFlag = false;
+    }
     screen.textContent += btn.textContent;
     number += btn.textContent;
   });
@@ -101,6 +106,8 @@ document
     sign = 0;
     screen.textContent = "";
     percent = false;
+    screen.textContent = 0;
+    startFlag = true;
   });
 
 document
