@@ -74,13 +74,13 @@ equal.addEventListener("click", () => {
     firstNumber = "";
     sign = "";
   } else if (sign === "/") {
-    screen.textContent = +firstNumber / +number;
-    number = +firstNumber / +number;
+    screen.textContent = ((+firstNumber / +number) * 100) / 100;
+    number = ((+firstNumber / +number) * 100) / 100;
     firstNumber = "";
     sign = "";
   } else if (sign === "*") {
-    screen.textContent = +firstNumber * +number;
-    number = +firstNumber * +number;
+    screen.textContent = (+firstNumber * +number * 100) / 100;
+    number = (+firstNumber * +number * 100) / 100;
     firstNumber = "";
     sign = "";
   }
